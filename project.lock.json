@@ -690,10 +690,10 @@
       "System.Data.SQLite.Core/1.0.103": {
         "type": "package",
         "compile": {
-          "lib/net45/System.Data.SQLite.dll": {}
+          "lib/net451/System.Data.SQLite.dll": {}
         },
         "runtime": {
-          "lib/net45/System.Data.SQLite.dll": {}
+          "lib/net451/System.Data.SQLite.dll": {}
         }
       },
       "System.Data.SQLite.EF6/1.0.103": {
@@ -702,19 +702,19 @@
           "EntityFramework": "6.0.0"
         },
         "compile": {
-          "lib/net45/System.Data.SQLite.EF6.dll": {}
+          "lib/net451/System.Data.SQLite.EF6.dll": {}
         },
         "runtime": {
-          "lib/net45/System.Data.SQLite.EF6.dll": {}
+          "lib/net451/System.Data.SQLite.EF6.dll": {}
         }
       },
       "System.Data.SQLite.Linq/1.0.103": {
         "type": "package",
         "compile": {
-          "lib/net45/System.Data.SQLite.Linq.dll": {}
+          "lib/net451/System.Data.SQLite.Linq.dll": {}
         },
         "runtime": {
-          "lib/net45/System.Data.SQLite.Linq.dll": {}
+          "lib/net451/System.Data.SQLite.Linq.dll": {}
         }
       },
       "System.Data.SQLite.x64/1.0.103": {
@@ -724,10 +724,10 @@
           "System.Data.SQLite.Linq": "1.0.103"
         },
         "compile": {
-          "lib/net45/System.Data.SQLite.dll": {}
+          "lib/net451/System.Data.SQLite.dll": {}
         },
         "runtime": {
-          "lib/net45/System.Data.SQLite.dll": {}
+          "lib/net451/System.Data.SQLite.dll": {}
         }
       },
       "System.Data.SQLite.x86/1.0.103": {
@@ -737,10 +737,10 @@
           "System.Data.SQLite.Linq": "1.0.103"
         },
         "compile": {
-          "lib/net45/System.Data.SQLite.dll": {}
+          "lib/net451/System.Data.SQLite.dll": {}
         },
         "runtime": {
-          "lib/net45/System.Data.SQLite.dll": {}
+          "lib/net451/System.Data.SQLite.dll": {}
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -2165,6 +2165,9 @@
         },
         "compile": {
           "ref/netstandard1.2/System.Threading.Timer.dll": {}
+        },
+        "runtime": {
+          "lib/net451/_._": {}
         }
       },
       "System.Xml.ReaderWriter/4.3.0": {
