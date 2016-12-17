@@ -3,6 +3,17 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "EntityFramework/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -557,6 +568,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Collections.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Collections.Concurrent/4.3.0": {
@@ -646,6 +660,63 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.103": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.103",
+          "System.Data.SQLite.EF6": "1.0.103",
+          "System.Data.SQLite.Linq": "1.0.103"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.103": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Data.SQLite.dll": {}
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.103": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.0.0"
+        },
+        "compile": {
+          "lib/net45/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.103": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Data.SQLite.Linq.dll": {}
+        }
+      },
       "System.Diagnostics.Debug/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -655,6 +726,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.Debug.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/4.3.0": {
@@ -757,6 +831,9 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Diagnostics.Tools.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Diagnostics.Tracing/4.3.0": {
@@ -768,6 +845,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Diagnostics.Tracing.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Dynamic.Runtime/4.3.0": {
@@ -804,6 +884,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Globalization.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Globalization.Calendars/4.3.0": {
@@ -849,6 +932,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.IO.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.IO.Compression/4.3.0": {
@@ -872,6 +958,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.IO.Compression.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         },
         "runtimeTargets": {
           "runtimes/win/lib/netstandard1.3/_._": {
@@ -1122,6 +1211,9 @@
         "compile": {
           "ref/netstandard1.3/System.Net.Http.dll": {}
         },
+        "runtime": {
+          "lib/net45/_._": {}
+        },
         "runtimeTargets": {
           "runtimes/win/lib/netstandard1.3/_._": {
             "assetType": "runtime",
@@ -1167,6 +1259,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Net.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Net.Requests/4.3.0": {
@@ -1188,6 +1283,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Net.Requests.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         },
         "runtimeTargets": {
           "runtimes/win/lib/netstandard1.3/_._": {
@@ -1309,6 +1407,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Reflection.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Reflection.DispatchProxy/4.3.0": {
@@ -1387,6 +1488,9 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Reflection.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Reflection.Metadata/1.4.1": {
@@ -1425,6 +1529,9 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Reflection.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Reflection.TypeExtensions/4.3.0": {
@@ -1467,6 +1574,9 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Resources.ResourceManager.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Runtime/4.3.0": {
@@ -1477,6 +1587,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Runtime.Extensions/4.3.0": {
@@ -1488,6 +1601,9 @@
         },
         "compile": {
           "ref/netstandard1.5/System.Runtime.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Runtime.Handles/4.3.0": {
@@ -1513,6 +1629,9 @@
         },
         "compile": {
           "ref/netcoreapp1.1/System.Runtime.InteropServices.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Runtime.InteropServices.RuntimeInformation/4.3.0": {
@@ -1828,6 +1947,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Text.Encoding.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Text.Encoding.CodePages/4.0.1": {
@@ -1866,6 +1988,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Text.RegularExpressions/4.3.0": {
@@ -1877,7 +2002,7 @@
           "ref/netcoreapp1.1/System.Text.RegularExpressions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.Text.RegularExpressions.dll": {}
         }
       },
       "System.Threading/4.3.0": {
@@ -1920,6 +2045,9 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
         }
       },
       "System.Threading.Tasks.Dataflow/4.7.0": {
@@ -2126,6 +2254,33 @@
     }
   },
   "libraries": {
+    "EntityFramework/6.0.0": {
+      "sha512": "y6lX/VMghGBV6TvgQS4Q2WK6kAcOoyD+TQxObN9utd0JsMMdMxyqARxKbvgi7KEIbQ8osZ4ZvImaly7l3NDFDw==",
+      "type": "package",
+      "path": "EntityFramework/6.0.0",
+      "files": [
+        "Content/App.config.transform",
+        "Content/Web.config.transform",
+        "EntityFramework.6.0.0.nupkg.sha512",
+        "EntityFramework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "OTciYA2ndFanFxkph+nFj0jt2ajVwYasIIgVq9C6ovL+HcVqIxots0qpxB2ob4OSaWDEFT/IcqAh2CoYgVSYrA==",
       "type": "package",
@@ -2216,7 +2371,7 @@
         "Microsoft.CSharp.4.3.0.nupkg.sha512",
         "Microsoft.CSharp.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -2289,7 +2444,7 @@
         "Microsoft.NETCore.App.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.App.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netcoreapp1.0/_._"
       ]
     },
@@ -2301,7 +2456,7 @@
         "Microsoft.NETCore.DotNetHost.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.DotNetHost.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.json"
       ]
     },
@@ -2313,7 +2468,7 @@
         "Microsoft.NETCore.DotNetHostPolicy.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.DotNetHostPolicy.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.json"
       ]
     },
@@ -2325,7 +2480,7 @@
         "Microsoft.NETCore.DotNetHostResolver.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.DotNetHostResolver.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.json"
       ]
     },
@@ -2337,7 +2492,7 @@
         "Microsoft.NETCore.Jit.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.Jit.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.json"
       ]
     },
@@ -2349,7 +2504,7 @@
         "Microsoft.NETCore.Platforms.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.Platforms.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.json"
       ]
@@ -2362,7 +2517,7 @@
         "Microsoft.NETCore.Runtime.CoreCLR.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.Runtime.CoreCLR.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.json"
       ]
     },
@@ -2374,7 +2529,7 @@
         "Microsoft.NETCore.Targets.1.1.0.nupkg.sha512",
         "Microsoft.NETCore.Targets.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.json"
       ]
@@ -2387,7 +2542,7 @@
         "Microsoft.NETCore.Windows.ApiSets.1.0.1.nupkg.sha512",
         "Microsoft.NETCore.Windows.ApiSets.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.json"
       ]
     },
@@ -2399,7 +2554,7 @@
         "Microsoft.VisualBasic.10.1.0.nupkg.sha512",
         "Microsoft.VisualBasic.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/net45/_._",
         "lib/netcore50/Microsoft.VisualBasic.dll",
         "lib/netstandard1.3/Microsoft.VisualBasic.dll",
@@ -2447,7 +2602,7 @@
         "Microsoft.Win32.Primitives.4.3.0.nupkg.sha512",
         "Microsoft.Win32.Primitives.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/Microsoft.Win32.Primitives.dll",
@@ -2483,7 +2638,7 @@
         "Microsoft.Win32.Registry.4.3.0.nupkg.sha512",
         "Microsoft.Win32.Registry.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/net46/Microsoft.Win32.Registry.dll",
         "ref/net46/Microsoft.Win32.Registry.dll",
         "ref/netstandard1.3/Microsoft.Win32.Registry.dll",
@@ -2520,7 +2675,7 @@
       "path": "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/debian.8-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2532,7 +2687,7 @@
       "path": "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/fedora.23-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2544,7 +2699,7 @@
       "path": "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/fedora.24-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2556,7 +2711,7 @@
       "path": "runtime.native.System/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.native.System.4.3.0.nupkg.sha512",
         "runtime.native.System.nuspec"
@@ -2568,7 +2723,7 @@
       "path": "runtime.native.System.IO.Compression/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.native.System.IO.Compression.4.3.0.nupkg.sha512",
         "runtime.native.System.IO.Compression.nuspec"
@@ -2580,7 +2735,7 @@
       "path": "runtime.native.System.Net.Http/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.native.System.Net.Http.4.3.0.nupkg.sha512",
         "runtime.native.System.Net.Http.nuspec"
@@ -2592,7 +2747,7 @@
       "path": "runtime.native.System.Net.Security/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.native.System.Net.Security.4.3.0.nupkg.sha512",
         "runtime.native.System.Net.Security.nuspec"
@@ -2604,7 +2759,7 @@
       "path": "runtime.native.System.Security.Cryptography.Apple/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.native.System.Security.Cryptography.Apple.4.3.0.nupkg.sha512",
         "runtime.native.System.Security.Cryptography.Apple.nuspec"
@@ -2616,7 +2771,7 @@
       "path": "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.native.System.Security.Cryptography.OpenSsl.nuspec"
@@ -2628,7 +2783,7 @@
       "path": "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/opensuse.13.2-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2640,7 +2795,7 @@
       "path": "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/opensuse.42.1-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2652,7 +2807,7 @@
       "path": "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple.4.3.0.nupkg.sha512",
         "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple.nuspec",
         "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.Apple.dylib"
@@ -2664,7 +2819,7 @@
       "path": "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.OpenSsl.dylib"
@@ -2676,7 +2831,7 @@
       "path": "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/rhel.7-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2688,7 +2843,7 @@
       "path": "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/ubuntu.14.04-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2700,7 +2855,7 @@
       "path": "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/ubuntu.16.04-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2712,7 +2867,7 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
@@ -2726,7 +2881,7 @@
         "System.AppContext.4.3.0.nupkg.sha512",
         "System.AppContext.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.AppContext.dll",
@@ -2779,7 +2934,7 @@
         "System.Buffers.4.3.0.nupkg.sha512",
         "System.Buffers.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.1/.xml",
         "lib/netstandard1.1/System.Buffers.dll"
       ]
@@ -2792,7 +2947,7 @@
         "System.Collections.4.3.0.nupkg.sha512",
         "System.Collections.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -2858,7 +3013,7 @@
         "System.Collections.Concurrent.4.3.0.nupkg.sha512",
         "System.Collections.Concurrent.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -2924,7 +3079,7 @@
         "System.Collections.Immutable.1.3.0.nupkg.sha512",
         "System.Collections.Immutable.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/System.Collections.Immutable.dll",
         "lib/netstandard1.0/System.Collections.Immutable.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
@@ -2939,7 +3094,7 @@
         "System.ComponentModel.4.3.0.nupkg.sha512",
         "System.ComponentModel.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -2996,7 +3151,7 @@
         "System.ComponentModel.Annotations.4.3.0.nupkg.sha512",
         "System.ComponentModel.Annotations.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -3073,7 +3228,7 @@
         "System.Console.4.3.0.nupkg.sha512",
         "System.Console.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Console.dll",
@@ -3101,6 +3256,155 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "System.Data.Common/4.3.0": {
+      "sha512": "lm6E3T5u7BOuEH0u18JpbJHxBfOJPuCyl4Kg1RH10ktYLp5uEEE1xKrHW56/We4SnZpGAuCc9N0MJpSDhTHZGQ==",
+      "type": "package",
+      "path": "System.Data.Common/4.3.0",
+      "files": [
+        "System.Data.Common.4.3.0.nupkg.sha512",
+        "System.Data.Common.nuspec",
+        "ThirdPartyNotices.txt",
+        "dotnet_Fashion_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/System.Data.Common.dll",
+        "lib/netstandard1.2/System.Data.Common.dll",
+        "lib/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/System.Data.Common.dll",
+        "ref/netstandard1.2/System.Data.Common.dll",
+        "ref/netstandard1.2/System.Data.Common.xml",
+        "ref/netstandard1.2/de/System.Data.Common.xml",
+        "ref/netstandard1.2/es/System.Data.Common.xml",
+        "ref/netstandard1.2/fr/System.Data.Common.xml",
+        "ref/netstandard1.2/it/System.Data.Common.xml",
+        "ref/netstandard1.2/ja/System.Data.Common.xml",
+        "ref/netstandard1.2/ko/System.Data.Common.xml",
+        "ref/netstandard1.2/ru/System.Data.Common.xml",
+        "ref/netstandard1.2/zh-hans/System.Data.Common.xml",
+        "ref/netstandard1.2/zh-hant/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
+        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/de/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/es/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/fr/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/it/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ja/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ko/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ru/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/zh-hans/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/zh-hant/System.Data.Common.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "System.Data.SQLite/1.0.103": {
+      "sha512": "v6Lvf7STfHHKjtuCd4EMA7OXlKaomBxfHsSdNO31bNLAtxGKWRVDt4SSd63MnTfFSS/s0LHy/KkUcX8AT734vQ==",
+      "type": "package",
+      "path": "System.Data.SQLite/1.0.103",
+      "files": [
+        "System.Data.SQLite.1.0.103.nupkg.sha512",
+        "System.Data.SQLite.nuspec"
+      ]
+    },
+    "System.Data.SQLite.Core/1.0.103": {
+      "sha512": "m5IO4QvtNUQd7yAKVBzHrILEDF2lWo3V1U7Dc2WL7omntOiE/YD/E/SjtFO74vsC6tyTS/wFy62tSFA1Wa+uhA==",
+      "type": "package",
+      "path": "System.Data.SQLite.Core/1.0.103",
+      "files": [
+        "System.Data.SQLite.Core.1.0.103.nupkg.sha512",
+        "System.Data.SQLite.Core.nuspec",
+        "build/net20/System.Data.SQLite.Core.targets",
+        "build/net20/x64/SQLite.Interop.dll",
+        "build/net20/x86/SQLite.Interop.dll",
+        "build/net40/System.Data.SQLite.Core.targets",
+        "build/net40/x64/SQLite.Interop.dll",
+        "build/net40/x86/SQLite.Interop.dll",
+        "build/net45/System.Data.SQLite.Core.targets",
+        "build/net45/x64/SQLite.Interop.dll",
+        "build/net45/x86/SQLite.Interop.dll",
+        "build/net451/System.Data.SQLite.Core.targets",
+        "build/net451/x64/SQLite.Interop.dll",
+        "build/net451/x86/SQLite.Interop.dll",
+        "build/net46/System.Data.SQLite.Core.targets",
+        "build/net46/x64/SQLite.Interop.dll",
+        "build/net46/x86/SQLite.Interop.dll",
+        "lib/net20/System.Data.SQLite.dll",
+        "lib/net20/System.Data.SQLite.xml",
+        "lib/net40/System.Data.SQLite.dll",
+        "lib/net40/System.Data.SQLite.xml",
+        "lib/net45/System.Data.SQLite.dll",
+        "lib/net45/System.Data.SQLite.xml",
+        "lib/net451/System.Data.SQLite.dll",
+        "lib/net451/System.Data.SQLite.xml",
+        "lib/net46/System.Data.SQLite.dll",
+        "lib/net46/System.Data.SQLite.xml"
+      ]
+    },
+    "System.Data.SQLite.EF6/1.0.103": {
+      "sha512": "rHegL+XW0qaOCL/F+pJkZPCY+N1TYrpsGyu9ejWG1A0/MXt/gvLDIEwsWlXvBGWE2SBifXD3rS2WHSqgxJLZ+w==",
+      "type": "package",
+      "path": "System.Data.SQLite.EF6/1.0.103",
+      "files": [
+        "System.Data.SQLite.EF6.1.0.103.nupkg.sha512",
+        "System.Data.SQLite.EF6.nuspec",
+        "content/net40/app.config.install.xdt",
+        "content/net40/app.config.transform",
+        "content/net40/web.config.install.xdt",
+        "content/net40/web.config.transform",
+        "content/net45/app.config.install.xdt",
+        "content/net45/app.config.transform",
+        "content/net45/web.config.install.xdt",
+        "content/net45/web.config.transform",
+        "content/net451/app.config.install.xdt",
+        "content/net451/app.config.transform",
+        "content/net451/web.config.install.xdt",
+        "content/net451/web.config.transform",
+        "content/net46/app.config.install.xdt",
+        "content/net46/app.config.transform",
+        "content/net46/web.config.install.xdt",
+        "content/net46/web.config.transform",
+        "lib/net40/System.Data.SQLite.EF6.dll",
+        "lib/net45/System.Data.SQLite.EF6.dll",
+        "lib/net451/System.Data.SQLite.EF6.dll",
+        "lib/net46/System.Data.SQLite.EF6.dll",
+        "tools/net40/install.ps1",
+        "tools/net45/install.ps1",
+        "tools/net451/install.ps1",
+        "tools/net46/install.ps1"
+      ]
+    },
+    "System.Data.SQLite.Linq/1.0.103": {
+      "sha512": "i/mpVCl5WIr0bh5JsITxOYrfI+ojW5pn3b5uQxyJERFCjV1fI7SoACMMKqDrqfoTUTpu6/OJNVzFxzddAUJxtA==",
+      "type": "package",
+      "path": "System.Data.SQLite.Linq/1.0.103",
+      "files": [
+        "System.Data.SQLite.Linq.1.0.103.nupkg.sha512",
+        "System.Data.SQLite.Linq.nuspec",
+        "content/net20/app.config.transform",
+        "content/net20/web.config.transform",
+        "content/net40/app.config.transform",
+        "content/net40/web.config.transform",
+        "content/net45/app.config.transform",
+        "content/net45/web.config.transform",
+        "content/net451/app.config.transform",
+        "content/net451/web.config.transform",
+        "content/net46/app.config.transform",
+        "content/net46/web.config.transform",
+        "lib/net20/System.Data.SQLite.Linq.dll",
+        "lib/net40/System.Data.SQLite.Linq.dll",
+        "lib/net45/System.Data.SQLite.Linq.dll",
+        "lib/net451/System.Data.SQLite.Linq.dll",
+        "lib/net46/System.Data.SQLite.Linq.dll"
+      ]
+    },
     "System.Diagnostics.Debug/4.3.0": {
       "sha512": "Yuqj7M4tlwxvER5gYvUHkfBShgS4HKdV/x+nd0QFemN4Yh59+09TcUGeVSnRdpuEciZ0FffvcIF+Yocccr+Ung==",
       "type": "package",
@@ -3109,7 +3413,7 @@
         "System.Diagnostics.Debug.4.3.0.nupkg.sha512",
         "System.Diagnostics.Debug.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -3175,7 +3479,7 @@
         "System.Diagnostics.DiagnosticSource.4.3.0.nupkg.sha512",
         "System.Diagnostics.DiagnosticSource.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/net46/System.Diagnostics.DiagnosticSource.dll",
         "lib/net46/System.Diagnostics.DiagnosticSource.xml",
         "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
@@ -3194,7 +3498,7 @@
         "System.Diagnostics.FileVersionInfo.4.0.0.nupkg.sha512",
         "System.Diagnostics.FileVersionInfo.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Diagnostics.FileVersionInfo.dll",
@@ -3234,7 +3538,7 @@
         "System.Diagnostics.Process.4.3.0.nupkg.sha512",
         "System.Diagnostics.Process.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Diagnostics.Process.dll",
@@ -3289,7 +3593,7 @@
         "System.Diagnostics.StackTrace.4.0.1.nupkg.sha512",
         "System.Diagnostics.StackTrace.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Diagnostics.StackTrace.dll",
@@ -3327,7 +3631,7 @@
         "System.Diagnostics.Tools.4.3.0.nupkg.sha512",
         "System.Diagnostics.Tools.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -3382,7 +3686,7 @@
         "System.Diagnostics.Tracing.4.3.0.nupkg.sha512",
         "System.Diagnostics.Tracing.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -3470,7 +3774,7 @@
         "System.Dynamic.Runtime.4.3.0.nupkg.sha512",
         "System.Dynamic.Runtime.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -3539,7 +3843,7 @@
         "System.Globalization.4.3.0.nupkg.sha512",
         "System.Globalization.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -3605,7 +3909,7 @@
         "System.Globalization.Calendars.4.3.0.nupkg.sha512",
         "System.Globalization.Calendars.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Globalization.Calendars.dll",
@@ -3641,7 +3945,7 @@
         "System.Globalization.Extensions.4.3.0.nupkg.sha512",
         "System.Globalization.Extensions.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Globalization.Extensions.dll",
@@ -3680,7 +3984,7 @@
         "System.IO.4.3.0.nupkg.sha512",
         "System.IO.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -3759,7 +4063,7 @@
         "System.IO.Compression.4.3.0.nupkg.sha512",
         "System.IO.Compression.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -3828,7 +4132,7 @@
         "System.IO.Compression.ZipFile.4.3.0.nupkg.sha512",
         "System.IO.Compression.ZipFile.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.IO.Compression.ZipFile.dll",
@@ -3865,7 +4169,7 @@
         "System.IO.FileSystem.4.3.0.nupkg.sha512",
         "System.IO.FileSystem.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.IO.FileSystem.dll",
@@ -3901,7 +4205,7 @@
         "System.IO.FileSystem.Primitives.4.3.0.nupkg.sha512",
         "System.IO.FileSystem.Primitives.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.IO.FileSystem.Primitives.dll",
@@ -3938,7 +4242,7 @@
         "System.IO.FileSystem.Watcher.4.3.0.nupkg.sha512",
         "System.IO.FileSystem.Watcher.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.IO.FileSystem.Watcher.dll",
@@ -3979,7 +4283,7 @@
         "System.IO.MemoryMappedFiles.4.3.0.nupkg.sha512",
         "System.IO.MemoryMappedFiles.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.IO.MemoryMappedFiles.dll",
@@ -4019,7 +4323,7 @@
         "System.IO.UnmanagedMemoryStream.4.3.0.nupkg.sha512",
         "System.IO.UnmanagedMemoryStream.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.IO.UnmanagedMemoryStream.dll",
@@ -4056,7 +4360,7 @@
         "System.Linq.4.3.0.nupkg.sha512",
         "System.Linq.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -4126,7 +4430,7 @@
         "System.Linq.Expressions.4.3.0.nupkg.sha512",
         "System.Linq.Expressions.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -4208,7 +4512,7 @@
         "System.Linq.Parallel.4.3.0.nupkg.sha512",
         "System.Linq.Parallel.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -4263,7 +4567,7 @@
         "System.Linq.Queryable.4.3.0.nupkg.sha512",
         "System.Linq.Queryable.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/monoandroid10/_._",
         "lib/monotouch10/_._",
         "lib/net45/_._",
@@ -4320,7 +4624,7 @@
         "System.Net.Http.4.3.0.nupkg.sha512",
         "System.Net.Http.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/Xamarinmac20/_._",
         "lib/monoandroid10/_._",
         "lib/monotouch10/_._",
@@ -4400,7 +4704,7 @@
         "System.Net.NameResolution.4.3.0.nupkg.sha512",
         "System.Net.NameResolution.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Net.NameResolution.dll",
@@ -4440,7 +4744,7 @@
         "System.Net.Primitives.4.3.0.nupkg.sha512",
         "System.Net.Primitives.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -4517,7 +4821,7 @@
         "System.Net.Requests.4.3.0.nupkg.sha512",
         "System.Net.Requests.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -4598,7 +4902,7 @@
         "System.Net.Security.4.3.0.nupkg.sha512",
         "System.Net.Security.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Net.Security.dll",
@@ -4638,7 +4942,7 @@
         "System.Net.Sockets.4.3.0.nupkg.sha512",
         "System.Net.Sockets.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Net.Sockets.dll",
@@ -4674,7 +4978,7 @@
         "System.Net.WebHeaderCollection.4.3.0.nupkg.sha512",
         "System.Net.WebHeaderCollection.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/_._",
@@ -4711,7 +5015,7 @@
         "System.Numerics.Vectors.4.3.0.nupkg.sha512",
         "System.Numerics.Vectors.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Numerics.Vectors.dll",
@@ -4744,7 +5048,7 @@
         "System.ObjectModel.4.3.0.nupkg.sha512",
         "System.ObjectModel.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -4812,7 +5116,7 @@
         "System.Reflection.4.3.0.nupkg.sha512",
         "System.Reflection.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -4891,7 +5195,7 @@
         "System.Reflection.DispatchProxy.4.3.0.nupkg.sha512",
         "System.Reflection.DispatchProxy.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/netstandard1.3/System.Reflection.DispatchProxy.dll",
@@ -4927,7 +5231,7 @@
         "System.Reflection.Emit.4.3.0.nupkg.sha512",
         "System.Reflection.Emit.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/monotouch10/_._",
         "lib/net45/_._",
@@ -4961,7 +5265,7 @@
         "System.Reflection.Emit.ILGeneration.4.3.0.nupkg.sha512",
         "System.Reflection.Emit.ILGeneration.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5004,7 +5308,7 @@
         "System.Reflection.Emit.Lightweight.4.3.0.nupkg.sha512",
         "System.Reflection.Emit.Lightweight.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5047,7 +5351,7 @@
         "System.Reflection.Extensions.4.3.0.nupkg.sha512",
         "System.Reflection.Extensions.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5102,7 +5406,7 @@
         "System.Reflection.Metadata.1.4.1.nupkg.sha512",
         "System.Reflection.Metadata.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.1/System.Reflection.Metadata.dll",
         "lib/netstandard1.1/System.Reflection.Metadata.xml",
         "lib/portable-net45+win8/System.Reflection.Metadata.dll",
@@ -5117,7 +5421,7 @@
         "System.Reflection.Primitives.4.3.0.nupkg.sha512",
         "System.Reflection.Primitives.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5172,7 +5476,7 @@
         "System.Reflection.TypeExtensions.4.3.0.nupkg.sha512",
         "System.Reflection.TypeExtensions.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Reflection.TypeExtensions.dll",
@@ -5224,7 +5528,7 @@
         "System.Resources.Reader.4.3.0.nupkg.sha512",
         "System.Resources.Reader.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/System.Resources.Reader.dll"
       ]
     },
@@ -5236,7 +5540,7 @@
         "System.Resources.ResourceManager.4.3.0.nupkg.sha512",
         "System.Resources.ResourceManager.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5291,7 +5595,7 @@
         "System.Runtime.4.3.0.nupkg.sha512",
         "System.Runtime.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5381,7 +5685,7 @@
         "System.Runtime.Extensions.4.3.0.nupkg.sha512",
         "System.Runtime.Extensions.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5460,7 +5764,7 @@
         "System.Runtime.Handles.4.3.0.nupkg.sha512",
         "System.Runtime.Handles.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/_._",
@@ -5496,7 +5800,7 @@
         "System.Runtime.InteropServices.4.3.0.nupkg.sha512",
         "System.Runtime.InteropServices.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5587,7 +5891,7 @@
         "System.Runtime.InteropServices.RuntimeInformation.4.3.0.nupkg.sha512",
         "System.Runtime.InteropServices.RuntimeInformation.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
@@ -5620,7 +5924,7 @@
         "System.Runtime.Loader.4.3.0.nupkg.sha512",
         "System.Runtime.Loader.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net462/_._",
@@ -5650,7 +5954,7 @@
         "System.Runtime.Numerics.4.3.0.nupkg.sha512",
         "System.Runtime.Numerics.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -5705,7 +6009,7 @@
         "System.Security.Claims.4.3.0.nupkg.sha512",
         "System.Security.Claims.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Security.Claims.dll",
@@ -5742,7 +6046,7 @@
         "System.Security.Cryptography.Algorithms.4.3.0.nupkg.sha512",
         "System.Security.Cryptography.Algorithms.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Security.Cryptography.Algorithms.dll",
@@ -5781,7 +6085,7 @@
         "System.Security.Cryptography.Cng.4.3.0.nupkg.sha512",
         "System.Security.Cryptography.Cng.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/net46/System.Security.Cryptography.Cng.dll",
         "lib/net461/System.Security.Cryptography.Cng.dll",
         "lib/net463/System.Security.Cryptography.Cng.dll",
@@ -5807,7 +6111,7 @@
         "System.Security.Cryptography.Csp.4.3.0.nupkg.sha512",
         "System.Security.Cryptography.Csp.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Security.Cryptography.Csp.dll",
@@ -5837,7 +6141,7 @@
         "System.Security.Cryptography.Encoding.4.3.0.nupkg.sha512",
         "System.Security.Cryptography.Encoding.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Security.Cryptography.Encoding.dll",
@@ -5876,7 +6180,7 @@
         "System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512",
         "System.Security.Cryptography.OpenSsl.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
         "ref/netstandard1.6/System.Security.Cryptography.OpenSsl.dll",
         "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll"
@@ -5890,7 +6194,7 @@
         "System.Security.Cryptography.Primitives.4.3.0.nupkg.sha512",
         "System.Security.Cryptography.Primitives.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Security.Cryptography.Primitives.dll",
@@ -5917,7 +6221,7 @@
         "System.Security.Cryptography.X509Certificates.4.3.0.nupkg.sha512",
         "System.Security.Cryptography.X509Certificates.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Security.Cryptography.X509Certificates.dll",
@@ -5971,7 +6275,7 @@
         "System.Security.Principal.4.3.0.nupkg.sha512",
         "System.Security.Principal.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6028,7 +6332,7 @@
         "System.Security.Principal.Windows.4.3.0.nupkg.sha512",
         "System.Security.Principal.Windows.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/net46/System.Security.Principal.Windows.dll",
         "ref/net46/System.Security.Principal.Windows.dll",
         "ref/netstandard1.3/System.Security.Principal.Windows.dll",
@@ -6055,7 +6359,7 @@
         "System.Text.Encoding.4.3.0.nupkg.sha512",
         "System.Text.Encoding.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6121,7 +6425,7 @@
         "System.Text.Encoding.CodePages.4.0.1.nupkg.sha512",
         "System.Text.Encoding.CodePages.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Text.Encoding.CodePages.dll",
@@ -6158,7 +6462,7 @@
         "System.Text.Encoding.Extensions.4.3.0.nupkg.sha512",
         "System.Text.Encoding.Extensions.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6224,7 +6528,7 @@
         "System.Text.RegularExpressions.4.3.0.nupkg.sha512",
         "System.Text.RegularExpressions.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6306,7 +6610,7 @@
         "System.Threading.4.3.0.nupkg.sha512",
         "System.Threading.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6375,7 +6679,7 @@
         "System.Threading.Overlapped.4.3.0.nupkg.sha512",
         "System.Threading.Overlapped.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/net46/System.Threading.Overlapped.dll",
         "ref/net46/System.Threading.Overlapped.dll",
         "ref/netstandard1.3/System.Threading.Overlapped.dll",
@@ -6403,7 +6707,7 @@
         "System.Threading.Tasks.4.3.0.nupkg.sha512",
         "System.Threading.Tasks.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6469,7 +6773,7 @@
         "System.Threading.Tasks.Dataflow.4.7.0.nupkg.sha512",
         "System.Threading.Tasks.Dataflow.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/System.Threading.Tasks.Dataflow.XML",
         "lib/netstandard1.0/System.Threading.Tasks.Dataflow.dll",
         "lib/netstandard1.1/System.Threading.Tasks.Dataflow.XML",
@@ -6486,7 +6790,7 @@
         "System.Threading.Tasks.Extensions.4.3.0.nupkg.sha512",
         "System.Threading.Tasks.Extensions.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
@@ -6501,7 +6805,7 @@
         "System.Threading.Tasks.Parallel.4.3.0.nupkg.sha512",
         "System.Threading.Tasks.Parallel.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6556,7 +6860,7 @@
         "System.Threading.Thread.4.3.0.nupkg.sha512",
         "System.Threading.Thread.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Threading.Thread.dll",
@@ -6594,7 +6898,7 @@
         "System.Threading.ThreadPool.4.3.0.nupkg.sha512",
         "System.Threading.ThreadPool.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Threading.ThreadPool.dll",
@@ -6632,7 +6936,7 @@
         "System.Threading.Timer.4.3.0.nupkg.sha512",
         "System.Threading.Timer.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net451/_._",
@@ -6685,7 +6989,7 @@
         "System.Xml.ReaderWriter.4.3.0.nupkg.sha512",
         "System.Xml.ReaderWriter.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6755,7 +7059,7 @@
         "System.Xml.XDocument.4.3.0.nupkg.sha512",
         "System.Xml.XDocument.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
@@ -6823,7 +7127,7 @@
         "System.Xml.XmlDocument.4.0.1.nupkg.sha512",
         "System.Xml.XmlDocument.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Xml.XmlDocument.dll",
@@ -6860,7 +7164,7 @@
         "System.Xml.XPath.4.0.1.nupkg.sha512",
         "System.Xml.XPath.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Xml.XPath.dll",
@@ -6897,7 +7201,7 @@
         "System.Xml.XPath.XDocument.4.0.1.nupkg.sha512",
         "System.Xml.XPath.XDocument.nuspec",
         "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "dotnet_Fashion_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Xml.XPath.XDocument.dll",
@@ -6928,7 +7232,13 @@
     }
   },
   "projectFileDependencyGroups": {
-    "": [],
+    "": [
+      "System.Data.Common >= 4.3.0",
+      "System.Data.SQLite >= 1.0.103",
+      "System.Data.SQLite.Core >= 1.0.103",
+      "System.Data.SQLite.EF6 >= 1.0.103",
+      "System.Data.SQLite.Linq >= 1.0.103"
+    ],
     ".NETCoreApp,Version=v1.1": [
       "Microsoft.NETCore.App >= 1.1.0"
     ]
