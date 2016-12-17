@@ -28,7 +28,6 @@ namespace CreateDictionary.Memory
 
                 }, obj);
             });
-            var getall = MemoryInfor.GetAllProducts();
 
             #endregion
         }

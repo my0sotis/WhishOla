@@ -717,6 +717,32 @@
           "lib/net45/System.Data.SQLite.Linq.dll": {}
         }
       },
+      "System.Data.SQLite.x64/1.0.103": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.EF6": "1.0.103",
+          "System.Data.SQLite.Linq": "1.0.103"
+        },
+        "compile": {
+          "lib/net45/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Data.SQLite.dll": {}
+        }
+      },
+      "System.Data.SQLite.x86/1.0.103": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.EF6": "1.0.103",
+          "System.Data.SQLite.Linq": "1.0.103"
+        },
+        "compile": {
+          "lib/net45/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Data.SQLite.dll": {}
+        }
+      },
       "System.Diagnostics.Debug/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3403,6 +3429,44 @@
         "lib/net45/System.Data.SQLite.Linq.dll",
         "lib/net451/System.Data.SQLite.Linq.dll",
         "lib/net46/System.Data.SQLite.Linq.dll"
+      ]
+    },
+    "System.Data.SQLite.x64/1.0.103": {
+      "sha512": "YoCzbPSYvwtlFG+kdMzWdeBl7KZ0HdTGP2cZDILlLuRQC99+AFSwrVTp2XsfGtmLqrcnFFGXWGwD5P8+Zc3qtQ==",
+      "type": "package",
+      "path": "System.Data.SQLite.x64/1.0.103",
+      "files": [
+        "System.Data.SQLite.x64.1.0.103.nupkg.sha512",
+        "System.Data.SQLite.x64.nuspec",
+        "lib/net20/System.Data.SQLite.dll",
+        "lib/net20/System.Data.SQLite.xml",
+        "lib/net40/System.Data.SQLite.dll",
+        "lib/net40/System.Data.SQLite.xml",
+        "lib/net45/System.Data.SQLite.dll",
+        "lib/net45/System.Data.SQLite.xml",
+        "lib/net451/System.Data.SQLite.dll",
+        "lib/net451/System.Data.SQLite.xml",
+        "lib/net46/System.Data.SQLite.dll",
+        "lib/net46/System.Data.SQLite.xml"
+      ]
+    },
+    "System.Data.SQLite.x86/1.0.103": {
+      "sha512": "7T8tkSPAZMW56dQmXDYqL8+2ybI8tgqPFTc8+jgZ59tV7LgL9qA9ymHqYx6Fs3dbY45YRR4nyDs+XUeto5v1cw==",
+      "type": "package",
+      "path": "System.Data.SQLite.x86/1.0.103",
+      "files": [
+        "System.Data.SQLite.x86.1.0.103.nupkg.sha512",
+        "System.Data.SQLite.x86.nuspec",
+        "lib/net20/System.Data.SQLite.dll",
+        "lib/net20/System.Data.SQLite.xml",
+        "lib/net40/System.Data.SQLite.dll",
+        "lib/net40/System.Data.SQLite.xml",
+        "lib/net45/System.Data.SQLite.dll",
+        "lib/net45/System.Data.SQLite.xml",
+        "lib/net451/System.Data.SQLite.dll",
+        "lib/net451/System.Data.SQLite.xml",
+        "lib/net46/System.Data.SQLite.dll",
+        "lib/net46/System.Data.SQLite.xml"
       ]
     },
     "System.Diagnostics.Debug/4.3.0": {
@@ -7237,7 +7301,9 @@
       "System.Data.SQLite >= 1.0.103",
       "System.Data.SQLite.Core >= 1.0.103",
       "System.Data.SQLite.EF6 >= 1.0.103",
-      "System.Data.SQLite.Linq >= 1.0.103"
+      "System.Data.SQLite.Linq >= 1.0.103",
+      "System.Data.SQLite.x64 >= 1.0.103",
+      "System.Data.SQLite.x86 >= 1.0.103"
     ],
     ".NETCoreApp,Version=v1.1": [
       "Microsoft.NETCore.App >= 1.1.0"
