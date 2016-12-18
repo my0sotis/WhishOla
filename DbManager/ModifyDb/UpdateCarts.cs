@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 
-namespace DbGenerate.Library
+namespace DbGenerate.Fashion
 {
     public class UpdateCarts:UpdateDefined
     {
@@ -25,7 +25,7 @@ namespace DbGenerate.Library
 						command.Parameters.AddWithValue("@CustomerName",temp.CustomerName  as string);
 						command.Parameters.AddWithValue("@Sdt",temp.Sdt  as string);
 						command.Parameters.AddWithValue("@Email",temp.Email  as string);
-						command.Parameters.AddWithValue("@DateCreated",temp.DateCreated  as DateTime? ?? default(DateTime?));
+						command.Parameters.AddWithValue("@DateCreated", temp.DateCreated  as DateTime? ?? default(DateTime?));
 						command.Parameters.AddWithValue("@Status",temp.Status  as bool? ?? default(bool?));
 
                         connection.Open();

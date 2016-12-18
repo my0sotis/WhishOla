@@ -1,5 +1,5 @@
 using System;
-using DbGenerate.Library;
+using DbGenerate.Fashion;
 
 namespace CreateDictionary.Memory
 {

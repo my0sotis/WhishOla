@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DbGenerate.Library
+namespace DbGenerate.Fashion
 {
     public class Colors:BaseEntities
     {

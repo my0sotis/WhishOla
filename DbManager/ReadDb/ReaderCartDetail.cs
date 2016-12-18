@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
-namespace DbGenerate.Library
+namespace DbGenerate.Fashion
 {
     public class ReadCartDetail:DbInfor
     {

@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DbGenerate.Library
+namespace DbGenerate.Fashion
 {
     public abstract class UpdateDefined:DbInfor
     {

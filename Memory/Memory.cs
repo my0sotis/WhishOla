@@ -1,10 +1,11 @@
 /*generate by tool EntityGenerate
  *Author:ManhTe
- */using System;
+ */
+ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DbGenerate.Library;
+using DbGenerate.Fashion;
 
 namespace CreateDictionary.Memory
 {
