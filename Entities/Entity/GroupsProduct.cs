@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DbGenerate.Fashion
+namespace DbGenerate.Library
 {
     public class GroupsProduct:BaseEntities
     {

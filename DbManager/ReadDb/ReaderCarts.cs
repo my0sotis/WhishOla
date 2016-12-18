@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
-namespace DbGenerate.Fashion
+namespace DbGenerate.Library
 {
     public class ReadCarts:DbInfor
     {
@@ -14,7 +14,7 @@ namespace DbGenerate.Fashion
 		static List<Carts> infor =null;
         public static List<Carts> ReadingCarts()
         {
-            const string querystring = "Select CartId, CustomerName, Sdt, Email, DateCreated, Status from Carts";
+            const string querystring = "Select CartId, CustomerName, Sdt, Email, Date(DateCreated) DateCreated , Status from Carts";
 			infor =new List<Carts>();
             if (infor.Count == 0)
             {
@@ -31,8 +31,8 @@ namespace DbGenerate.Fashion
 							entity.CustomerName = reader["CustomerName"] as string;
 							entity.Sdt = reader["Sdt"] as string;
 							entity.Email = reader["Email"] as string;
-                            entity.DateCreated = reader["DateCreated"] as DateTime? ?? default(DateTime?);
-						    entity.Status = decimal.Parse(reader["Status"].ToString()) == 1 ? true : false;
+							entity.DateCreated = Convert.ToDateTime(reader["DateCreated"]);
+							entity.Status = Convert.ToInt32(reader["Status"])==1? true:false;
 
 							infor.Add(entity);
 						}

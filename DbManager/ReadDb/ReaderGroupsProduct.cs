@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
-namespace DbGenerate.Fashion
+namespace DbGenerate.Library
 {
     public class ReadGroupsProduct:DbInfor
     {
@@ -29,7 +29,7 @@ namespace DbGenerate.Fashion
 							var entity = new GroupsProduct();
 							entity.GroupId = reader["GroupId"] as long? ?? default(long);
 							entity.GroupName = reader["GroupName"] as string;
-							entity.Status = reader["Status"] as bool? ?? default(bool?);
+							entity.Status = Convert.ToInt32(reader["Status"])==1? true:false;
 
 							infor.Add(entity);
 						}

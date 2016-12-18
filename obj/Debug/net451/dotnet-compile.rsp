@@ -1,0 +1,55 @@
+--temp-output:E:\DRIVE\WhishOla\obj\Debug\net451\
+--out:E:\DRIVE\WhishOla\bin\Debug\net451\WhishOla.exe
+--define:DEBUG
+--define:TRACE
+--define:NET451
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:x64
+--optimize:False
+--debug-type:portable
+--emit-entry-point:True
+--output-name:WhishOla
+--file-version:1.0.0.0
+--version:1.0.0.0
+--informational-version:1.0.0
+--target-framework:.NETFramework,Version=v4.5.1
+--reference:C:\Users\0baut_000\.nuget\packages\EntityFramework\6.0.0\lib\net45\EntityFramework.SqlServer.dll
+--reference:C:\Users\0baut_000\.nuget\packages\EntityFramework\6.0.0\lib\net45\EntityFramework.dll
+--reference:C:\Users\0baut_000\.nuget\packages\System.Data.Common\4.3.0\ref\net451\System.Data.Common.dll
+--reference:C:\Users\0baut_000\.nuget\packages\System.Data.SQLite.Core\1.0.103\lib\net451\System.Data.SQLite.dll
+--reference:C:\Users\0baut_000\.nuget\packages\System.Data.SQLite.EF6\1.0.104\lib\net451\System.Data.SQLite.EF6.dll
+--reference:C:\Users\0baut_000\.nuget\packages\System.Data.SQLite.Linq\1.0.104\lib\net451\System.Data.SQLite.Linq.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.ComponentModel.DataAnnotations.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Data.dll
+E:\DRIVE\WhishOla\Program.cs
+E:\DRIVE\WhishOla\DbManager\ModifyDb\UpdateCartDetail.cs
+E:\DRIVE\WhishOla\DbManager\ModifyDb\UpdateCarts.cs
+E:\DRIVE\WhishOla\DbManager\ModifyDb\UpdateColors.cs
+E:\DRIVE\WhishOla\DbManager\ModifyDb\UpdateDefined.cs
+E:\DRIVE\WhishOla\DbManager\ModifyDb\UpdateGroupsProduct.cs
+E:\DRIVE\WhishOla\DbManager\ModifyDb\UpdateProducts.cs
+E:\DRIVE\WhishOla\DbManager\ReadDb\DbInfor.cs
+E:\DRIVE\WhishOla\DbManager\ReadDb\ReaderCartDetail.cs
+E:\DRIVE\WhishOla\DbManager\ReadDb\ReaderCarts.cs
+E:\DRIVE\WhishOla\DbManager\ReadDb\ReaderColors.cs
+E:\DRIVE\WhishOla\DbManager\ReadDb\ReaderGroupsProduct.cs
+E:\DRIVE\WhishOla\DbManager\ReadDb\ReaderProducts.cs
+E:\DRIVE\WhishOla\Entities\Entity\BaseEntities.cs
+E:\DRIVE\WhishOla\Entities\Entity\CartDetail.cs
+E:\DRIVE\WhishOla\Entities\Entity\Carts.cs
+E:\DRIVE\WhishOla\Entities\Entity\Colors.cs
+E:\DRIVE\WhishOla\Entities\Entity\GroupsProduct.cs
+E:\DRIVE\WhishOla\Entities\Entity\Products.cs
+E:\DRIVE\WhishOla\Entities\Keys\CartDetailKey.cs
+E:\DRIVE\WhishOla\Memory\Memory.cs
+E:\DRIVE\WhishOla\Memory\MemoryDeletes.cs
+E:\DRIVE\WhishOla\Memory\MemoryGetOrGetAll.cs
+E:\DRIVE\WhishOla\Memory\MemoryInfor.KeyDb.cs
+E:\DRIVE\WhishOla\Memory\MemoryInit.cs
+E:\DRIVE\WhishOla\Memory\MemorySet.cs

@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
-namespace DbGenerate.Fashion
+namespace DbGenerate.Library
 {
     public class ReadProducts:DbInfor
     {
@@ -14,7 +14,7 @@ namespace DbGenerate.Fashion
 		static List<Products> infor =null;
         public static List<Products> ReadingProducts()
         {
-            const string querystring = "Select ProductId, ProductName, Date(DateImport) as DateImport, Price, Quantity, ProductType, ColorType, Status from Products";
+            const string querystring = "Select ProductId, ProductName, Date(DateImport) DateImport , Price, Quantity, ProductType, ColorType, Status from Products";
 			infor =new List<Products>();
             if (infor.Count == 0)
             {
@@ -29,12 +29,12 @@ namespace DbGenerate.Fashion
 							var entity = new Products();
 							entity.ProductId = reader["ProductId"] as long? ?? default(long);
 							entity.ProductName = reader["ProductName"] as string;
-                            var aa = Convert.ToDateTime(reader["DateImport"]);
-                            entity.Price = Convert.ToInt32(reader["Price"]);//note
-							entity.Quantity = reader["Quantity"] as int? ?? default(int?);
+							entity.DateImport = Convert.ToDateTime(reader["DateImport"]);
+							entity.Price = Convert.ToInt32(reader["Price"]);
+							entity.Quantity = Convert.ToInt32(reader["Quantity"]);
 							entity.ProductType = reader["ProductType"] as long? ?? default(long?);
 							entity.ColorType = reader["ColorType"] as long? ?? default(long?);
-						    entity.Status = decimal.Parse(reader["Status"].ToString()) == 1 ? true : false;
+							entity.Status = Convert.ToInt32(reader["Status"])==1? true:false;
 
 							infor.Add(entity);
 						}

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 
-namespace DbGenerate.Fashion
+namespace DbGenerate.Library
 {
     public class UpdateCartDetail:UpdateDefined
     {

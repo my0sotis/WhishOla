@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DbGenerate.Fashion;
+using DbGenerate.Library;
 
 namespace CreateDictionary.Memory
 {
@@ -36,21 +36,21 @@ namespace CreateDictionary.Memory
 			}
                 
         }
-        public static void RemoveMemory(Carts objectValue)
-        {
-            if (CartsDic.ContainsKey(objectValue.CartId))
-			{
-				CartsDic.Remove(objectValue.CartId);
-                _CartsUpdate.Delete(objectValue);
-			}
-                
-        }
         public static void RemoveMemory(CartDetailKeys objectValue)
         {
             if (CartDetailDic.ContainsKey(objectValue))
 			{
 				CartDetailDic.Remove(objectValue);
                 _CartDetailUpdate.Delete(objectValue);
+			}
+                
+        }
+        public static void RemoveMemory(Carts objectValue)
+        {
+            if (CartsDic.ContainsKey(objectValue.CartId))
+			{
+				CartsDic.Remove(objectValue.CartId);
+                _CartsUpdate.Delete(objectValue);
 			}
                 
         }

@@ -1,5 +1,5 @@
 @echo off
 
 dotnet restore
-dotnet run
+dotnet run -f net451
 

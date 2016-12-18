@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DbGenerate.Fashion;
+using DbGenerate.Library;
 
 namespace CreateDictionary.Memory
 {
@@ -45,18 +45,6 @@ namespace CreateDictionary.Memory
             GroupsProductDic[dic.GroupId] = dic;
             
         }
-        public static void SetMemory(Carts dic)
-        {
-			if (!CartsDic.ContainsKey(dic.CartId))
-            {
-                MakeKey(dic);
-                _CartsUpdate.Insert(dic);
-                
-            }
-            else _CartsUpdate.Update(dic);
-            CartsDic[dic.CartId] = dic;
-            
-        }
         public static void SetMemory(CartDetail cartdetailkeys)
         {
             var key = new CartDetailKeys()
@@ -74,6 +62,18 @@ namespace CreateDictionary.Memory
                 _CartDetailUpdate.Update(cartdetailkeys);
             }
             CartDetailDic[key] = cartdetailkeys;
+        }
+        public static void SetMemory(Carts dic)
+        {
+			if (!CartsDic.ContainsKey(dic.CartId))
+            {
+                MakeKey(dic);
+                _CartsUpdate.Insert(dic);
+                
+            }
+            else _CartsUpdate.Update(dic);
+            CartsDic[dic.CartId] = dic;
+            
         }
 
         #endregion

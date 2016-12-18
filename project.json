@@ -5,15 +5,24 @@
     "emitEntryPoint": true
   },
   "dependencies": {
-    "System.Data.Common": "4.3.0",
-    "System.Data.SQLite.x64": "1.0.103",
-    "System.Data.SQLite.x86": "1.0.103",
-    "System.Data.SQLite.Core": "1.0.103",
-    "System.Data.SQLite": "1.0.103",
-    "System.Data.SQLite.Linq": "1.0.103",
-    "System.Data.SQLite.EF6": "1.0.103"
+     "System.Data.Common": "4.3.0",
+    "System.Data.SQLite": "1.0.103"
   },
   "frameworks": {
+    "netstandard1.3": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.1",
+        "System.Data.Common": "4.3.0"
+      }
+    },
+    "net451": {
+      "dependencies": {
+        "System.Data.Common": "4.3.0",
+        "System.Data.SQLite": "1.0.103",
+        "System.Data.SQLite.x64": "1.0.104",
+        "System.Data.SQLite.x86": "1.0.104"
+      }
+    },
     "netcoreapp1.1": {
       "dependencies": {
         "Microsoft.NETCore.App": {
@@ -23,7 +32,7 @@
       },
       "imports": [
         "dnxcore50",
-        "net45"
+        "net451"
       ]
     }
   }

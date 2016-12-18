@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
-namespace DbGenerate.Fashion
+namespace DbGenerate.Library
 {
     public class ReadCartDetail:DbInfor
     {
@@ -31,7 +31,7 @@ namespace DbGenerate.Fashion
 							entity.ProductId = reader["ProductId"] as long? ?? default(long);
 							entity.Quatity = reader["Quatity"] as long? ?? default(long?);
 							entity.Sale = reader["Sale"] as double? ?? default(double?);
-							entity.Status = reader["Status"] as bool? ?? default(bool?);
+							entity.Status = Convert.ToInt32(reader["Status"])==1? true:false;
 
 							infor.Add(entity);
 						}

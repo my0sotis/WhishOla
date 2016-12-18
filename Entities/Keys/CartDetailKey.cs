@@ -3,7 +3,7 @@
  */
 using System;
 
-namespace DbGenerate.Fashion
+namespace DbGenerate.Library
 {
  public class CartDetailKeys
     {

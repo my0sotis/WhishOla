@@ -1,7 +1,7 @@
 using System;
-namespace DbGenerate.Fashion
+namespace DbGenerate.Library
 {
-    public abstract class BaseEntities
+    public abstract class BaseEntities:ICloneable
     {
 		#region Định nghĩa  BaseEntities
         public abstract string NameE();

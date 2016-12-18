@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DbGenerate.Fashion;
+using DbGenerate.Library;
 
 namespace CreateDictionary.Memory
 {
@@ -27,16 +27,16 @@ namespace CreateDictionary.Memory
                 return GroupsProductDic[groupsproduct].Clone() as GroupsProduct;
             return null;
         }
-        public static Carts GetCarts(long carts)
-        {
-            if (CartsDic.ContainsKey(carts))
-                return CartsDic[carts].Clone() as Carts;
-            return null;
-        }
         public static CartDetail GetCartDetail(CartDetailKeys cartdetail)
         {
             if (CartDetailDic.ContainsKey(cartdetail))
                 return CartDetailDic[cartdetail].Clone() as CartDetail;
+            return null;
+        }
+        public static Carts GetCarts(long carts)
+        {
+            if (CartsDic.ContainsKey(carts))
+                return CartsDic[carts].Clone() as Carts;
             return null;
         }
 
@@ -55,13 +55,13 @@ namespace CreateDictionary.Memory
         {
             return GroupsProductDic.Select(obj => obj.Value.Clone() as GroupsProduct).ToList();
         }
-        public static List<Carts> GetAllCarts()
-        {
-            return CartsDic.Select(obj => obj.Value.Clone() as Carts).ToList();
-        }
         public static List<CartDetail> GetAllCartDetail()
         {
             return CartDetailDic.Select(obj => obj.Value.Clone() as CartDetail).ToList();
+        }
+        public static List<Carts> GetAllCarts()
+        {
+            return CartsDic.Select(obj => obj.Value.Clone() as Carts).ToList();
         }
 
         #endregion
